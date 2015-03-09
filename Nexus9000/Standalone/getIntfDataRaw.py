@@ -16,15 +16,11 @@
 
 # This script can be run with the help option to print command line help:
 #
-# ./getVersion.py -h
+# ./getIntfDataRaw.py -h
 #
 # If you do not enter command line options, it will interactively prompt
 # for input. Password will be hidden in interactive input.
 # Sample run without entering password on CLI:
-#
-# /getVersion.py -i 1.1.1.1 -u admin
-# Password:
-# 7.0(3)I1(1)
 #
 # Note this script uses the requests library which can be brought in
 # through the python package manager "pip".
@@ -69,7 +65,7 @@ payload=[
     "jsonrpc": "2.0",
     "method": "cli",
     "params": {
-      "cmd": "show version",
+      "cmd": "show int mgmt0",
       "version": 1
     },
     "id": 1
@@ -78,4 +74,4 @@ payload=[
 
 #Send payload to network element, and print response
 response = requests.post(url,data=json.dumps(payload), headers=myheaders,auth=(user,passer)).json()
-print response['result']['body']['kickstart_ver_str']
+print json.dumps(response, indent=4, sort_keys=True)

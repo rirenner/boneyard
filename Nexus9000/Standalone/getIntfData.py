@@ -16,15 +16,11 @@
 
 # This script can be run with the help option to print command line help:
 #
-# ./getVersion.py -h
+# ./getIntfData.py -h
 #
 # If you do not enter command line options, it will interactively prompt
 # for input. Password will be hidden in interactive input.
 # Sample run without entering password on CLI:
-#
-# /getVersion.py -i 1.1.1.1 -u admin
-# Password:
-# 7.0(3)I1(1)
 #
 # Note this script uses the requests library which can be brought in
 # through the python package manager "pip".
@@ -69,7 +65,7 @@ payload=[
     "jsonrpc": "2.0",
     "method": "cli",
     "params": {
-      "cmd": "show version",
+      "cmd": "show int mgmt0",
       "version": 1
     },
     "id": 1
@@ -78,4 +74,17 @@ payload=[
 
 #Send payload to network element, and print response
 response = requests.post(url,data=json.dumps(payload), headers=myheaders,auth=(user,passer)).json()
-print response['result']['body']['kickstart_ver_str']
+
+intf = response['result']['body']['TABLE_interface']['ROW_interface']
+
+name = intf['interface']
+pkts_in = intf['vdc_lvl_in_pkts']
+bytes_in = intf['vdc_lvl_in_bytes']
+pkts_out = intf['vdc_lvl_out_pkts']
+bytes_out = intf['vdc_lvl_out_bytes']
+
+outter = "\n interface:\t" + name + ",\n packets_in:\t" + str(pkts_in)
+outter += ",\n bytes_in:\t" + str(bytes_in) + ",\n packets_out:\t"
+outter += str(pkts_out) + ",\n bytes_out:\t" + str(bytes_out) + ""
+
+print outter + "\n";

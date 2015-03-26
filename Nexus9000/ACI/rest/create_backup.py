@@ -74,7 +74,7 @@ else:
      suser = opts.SUSER
 
 if opts.SPASS is None:
-     spass = raw_input("SCP Password: ")
+     spass = getpass.getpass("SCP Password: ")
 else:
      spass = opts.SPASS
 

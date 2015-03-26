@@ -54,7 +54,7 @@ else:
      user = opts.USER
 
 if opts.PASS is None:
-     password = getpass.getpass("APCI Password: ")
+     password = getpass.getpass("APIC Password: ")
 else:
      password = opts.PASS
 

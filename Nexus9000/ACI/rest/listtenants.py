@@ -26,7 +26,7 @@ from optparse import OptionParser
 # Gather CLI and interactive input options
 optp = OptionParser()
 optp.add_option("-i", "--IP", dest="IP",
-             help="IP address of APCI to connect to")
+             help="IP address of APIC to connect to")
 optp.add_option("-u", "--USER", dest="USER",
               help="Username")
 optp.add_option("-p", "--PASS", dest="PASS",

@@ -36,7 +36,7 @@ opts, args = optp.parse_args()
 if opts.IP is None:
      apic = raw_input("APIC IP Address: ")
 else:
-     apci = opts.IP
+     apic = opts.IP
 
 if opts.USER is None:
      user = raw_input("Username: ")

@@ -3,9 +3,8 @@
 from nxapi_module import * 
 
 response = donxapi('cli_show', 'show int mgmt0')
-intf = ['body']
-print response['body']['TABLE_interface']['ROW_interface']
 
+intf = response['body']['TABLE_interface']['ROW_interface']
 name = intf['interface']
 pkts_in = intf['vdc_lvl_in_pkts']
 bytes_in = intf['vdc_lvl_in_bytes']

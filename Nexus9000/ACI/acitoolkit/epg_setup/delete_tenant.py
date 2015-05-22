@@ -33,7 +33,7 @@ sess = requests.Session()
 rsp = sess.post('{0}/api/mo/aaaLogin.json'.format(URL), data=json.dumps(userJson, sort_keys=True, indent=4, separators=(',', ': ')), verify=False)
 
 
-#Delete tenant tn-Vegas
+#Delete tenant tnDemo
 Json2 = { "polUni": { "attributes": { "dn": "uni", "status": "modified"}, "children":[ {"fvTenant":{"attributes":{"dn":"uni/tn-tnDemo","status":"deleted"},"children":[]}}]}}
 
 rsp = sess.post('{0}/api/node/mo/uni.json'.format(URL), data=json.dumps(Json2, sort_keys=True, indent=4, separators=(',', ': ')), verify=False)

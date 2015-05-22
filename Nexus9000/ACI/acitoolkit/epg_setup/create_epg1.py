@@ -16,7 +16,7 @@
 #    under the License.
 #
 from acitoolkit.acitoolkit import *
-#from credentials import *
+from toolkit_helper import *
 
 import requests
 import sys
@@ -30,23 +30,14 @@ URL = 'https://10.95.33.232'
 LOGIN = 'admin' 
 PASSWORD = getpass.getpass('Password:')
 
-def send_to_apic(tenant):
-    # Login to APIC and push the config
-    session = Session(URL, LOGIN, PASSWORD, False)
-    session.login()
-    resp = session.push_to_apic(tenant.get_url(), data=tenant.get_json())
-    if resp.ok:
-        print 'Success'
-
-# Basic Connectivity Example
-# Equivalent to connecting to ports to the same VLAN
-
 # Create a tenant
 tenant = Tenant('tnDemo')
 
-# Create a Context and a BridgeDomain
+# Create a Context (vrf)
 context = Context('vrfDemo', tenant)
 context.set_allow_all(False)
+
+#Create a bridge domain
 bd = BridgeDomain('bdDemo', tenant)
 bd.add_context(context)
 gateway = Subnet('gateway',bd)
@@ -54,7 +45,7 @@ gateway.set_addr('10.30.10.1/24')
 bd.add_subnet(gateway)
 
 
-# Create an App Profile and an EPG
+# Create an ANP and an EPG
 app = AppProfile('anpDemo', tenant)
 epg = EPG('epgWeb', app)
 
@@ -62,28 +53,18 @@ epg = EPG('epgWeb', app)
 if1 = Interface('eth','1','102','1','1')
 l2if = L2Interface('eth 1/102/1/1', 'vlan', '30')
 l2if.attach(if1)
-
-
 epg.attach(l2if)
 epg.add_bd(bd)
 
 
 # Dump the necessary configuration
-print 'URL:', tenant.get_url()
-print 'JSON:', tenant.get_json()
+#print 'URL:', tenant.get_url()
+#print 'JSON:', tenant.get_json()
 
-send_to_apic(tenant)
+send_to_apic(tenant, URL, LOGIN, PASSWORD)
 
-# Clean up
-#tenant.mark_as_deleted()
-#send_to_apic(tenant)
 
 # Now lets make the ports untagged:
-#login 
-userJson = {'aaaUser': {'attributes': {'name': LOGIN, 'pwd': PASSWORD } } }
-sess = requests.Session()
-rsp = sess.post('{0}/api/mo/aaaLogin.json'.format(URL), data=json.dumps(userJson, sort_keys=True, indent=4, separators=(',', ': ')), verify=False)
+mark_port_untagged(tenant, app, epg, '1/102/1/1', URL, LOGIN, PASSWORD)
 
 
-Json2 = { "fvRsPathAtt": { "attributes": { "mode": "untagged", "tDn": "topology/pod-1/paths-102/pathep-[eth1/1]" }, "children": [] } }
-rsp = sess.post('{0}/api/node/mo/uni/tn-tnDemo/ap-anpDemo/epg-epgWeb/rspathAtt-[topology/pod-1/paths-102/pathep-[eth1/1]].json'.format(URL), data=json.dumps(Json2, sort_keys=True, indent=4, separators=(',', ': ')), verify=False)

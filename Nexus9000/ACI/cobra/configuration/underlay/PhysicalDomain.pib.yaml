@@ -1,0 +1,12 @@
+---
+# Usage:
+# -------------------------------------------------------
+# physical_domain: <physical_domain>
+# optional_args:
+#   vlan_pool: <vlan_pool>
+#   vlan_mode: [ dynamic | static ]
+
+physical_domain: Pib_domain
+optional_args:
+  vlan_pool: Pib_vlans
+  vlan_mode: static

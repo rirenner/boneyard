@@ -1,0 +1,28 @@
+---
+host: 10.95.33.232 
+user: admin
+password: Cisco321 
+
+# Usage:
+# -------------------------------------------------------
+# tenant: <tenant>
+# contract: <contract>
+# optional_args:
+#   subject: <subject_name>
+#   scope: [ application-profile | context | global | tenant ]
+#   prio: [ level1 | level2 | level3 | unspecified ]
+#   reverse_filter_ports: [ true | false ]
+#   subject_prio: [ level1 | level2 | level3 | unspecified ]
+##  Specify filters. You can have any number of filters.
+#   filters:
+#   - <filter1>
+#   - <filter2>
+
+tenant: Pis
+contract: icmp_contract 
+optional_args:
+  subject: icmp_subject
+  scope: context
+  reverse_filter_ports: true
+  filters:
+  - icmp_filter

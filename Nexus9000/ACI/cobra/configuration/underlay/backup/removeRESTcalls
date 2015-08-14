@@ -1,0 +1,34 @@
+removeInterfacePcAndVpc.py:
+
+method: POST
+url: https://10.95.33.232/api/node/mo/uni/infra.json
+payload: {"infraInfra":{"attributes":{"dn":"uni/infra","status":"modified"},"children":[{"infraNodeP":{"attributes":{"dn":"uni/infra/nprof-Leaf2_Pia","status":"deleted"},"children":[]}}]}}
+response: {"totalCount":"0","imdata":[]}
+
+removeAccessPortPolicyGroup.py:
+
+method: POST
+url: https://10.95.33.232/api/node/mo/uni/infra/funcprof/accportgrp-Pia_PolGrp_port_1_1.json
+payload: {"infraAccPortGrp":{"attributes":{"dn":"uni/infra/funcprof/accportgrp-Pia_PolGrp_port_1_1","status":"deleted"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+
+removeAttachableAccessEntityprofile.py:
+
+method: POST
+url: https://10.95.33.232/api/node/mo/uni/infra.json
+payload: {"infraInfra":{"attributes":{"dn":"uni/infra","status":"modified"},"children":[{"infraAttEntityP":{"attributes":{"dn":"uni/infra/attentp-Pia_AEP","status":"deleted"},"children":[]}}]}}
+response: {"totalCount":"0","imdata":[]}
+
+removePhysicalDomain.py:
+
+ethod: POST
+url: https://10.95.33.232/api/node/mo/uni.json
+payload: {"polUni":{"attributes":{"dn":"uni","status":"modified"},"children":[{"physDomP":{"attributes":{"dn":"uni/phys-Pia_domain","status":"deleted"},"children":[]}}]}}
+response: {"totalCount":"0","imdata":[]}
+
+removeVlanPool.py:
+
+method: POST
+url: https://10.95.33.232/api/node/mo/uni/infra.json
+payload: {"infraInfra":{"attributes":{"dn":"uni/infra","status":"modified"},"children":[{"fvnsVlanInstP":{"attributes":{"dn":"uni/infra/vlanns-[Pia_vlans]-static","status":"deleted"},"children":[]}}]}}
+response: {"totalCount":"0","imdata":[]}

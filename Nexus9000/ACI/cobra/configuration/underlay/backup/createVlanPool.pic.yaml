@@ -1,0 +1,16 @@
+---
+host: 10.95.33.232 
+user: admin
+password: Cisco321
+
+# Usage:
+# -------------------------------------------------------
+# vlan_name: <vlan>
+# vlan_mode: [ dynamic | static ]
+# range_from: <number>
+# range_to: <number>
+
+vlan_name: Pic_vlans
+vlan_mode: static
+range_from: '32'
+range_to: '32'

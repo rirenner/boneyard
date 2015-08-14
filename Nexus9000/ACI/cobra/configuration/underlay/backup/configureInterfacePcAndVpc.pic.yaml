@@ -1,0 +1,28 @@
+---
+host: 10.95.33.232 
+user: admin
+password: Cisco321 
+
+# Usage:
+# -------------------------------------------------------
+## Specify switches. You can have any number of switches.
+# switches:
+# - 101
+# - 102
+# switch_profile: <switch_profile_name>
+# interface_type: [individual | pc | vpc]
+# interface_selector: <interface_selector>
+# interface_policy_group: <interface_policy_group>
+## Specify interface ports. You can have any number of interface ports.
+# interface_ports:
+# - 1/33
+# - 1/34
+
+switches:
+- 103
+switch_profile: Leaf2_Pic
+interface_type: individual
+interface_selector: Pic_selector
+interface_policy_group: Pic_PolGrp_port_1_3
+interface_ports:
+- 1/3

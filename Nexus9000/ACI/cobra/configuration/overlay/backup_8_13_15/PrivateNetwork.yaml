@@ -1,0 +1,24 @@
+---
+host: 10.95.33.232 
+user: admin
+password: Cisco321 
+
+# Usage:
+# -------------------------------------------------------
+# tenant: <tenant>
+# private_network: <private_network>
+# optional_args:
+#   enforcement_preference: [ enforced | unenforced ]
+#   bgp_timers: <bgp_timers>
+#   ospf_timers: <ospf_timers>
+#   monitoring_policy: <monitoring_policy>
+#   dns_label: <dns_label>
+
+tenant: Pis
+private_network: PiVRF
+optional_args:
+  enforcement_preference: enforced
+  bgp_timers: 
+  ospf_timers: 
+  monitoring_policy: 
+  dns_label: 

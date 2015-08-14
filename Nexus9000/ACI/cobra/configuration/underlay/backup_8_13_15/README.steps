@@ -1,0 +1,61 @@
+
+Underlay
+--------------------------------------------------------------------------------------
+
+
+Pi-a
+----
+./createVlanPool.py yaml VlanPool.pia.yaml
+./createPhysicalDomain.py yaml PhysicalDomain.pia.yaml
+./createAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pia.yaml
+./createAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pia.yaml
+./configureInterfacePcAndVpc.py yaml InterfacePcAndVpc.pia.yaml 
+
+./removeInterfacePcAndVpc.py yaml InterfacePcAndVpc.pia.yaml 
+./removeAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pia.yaml
+./removeAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pia.yaml
+./removePhysicalDomain.py yaml PhysicalDomain.pia.yaml
+./removeVlanPool.py yaml VlanPool.pia.yaml
+
+Pi-b
+----
+./createVlanPool.py yaml VlanPool.pib.yaml
+./createPhysicalDomain.py yaml PhysicalDomain.pib.yaml
+./createAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pib.yaml
+./createAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pib.yaml
+./configureInterfacePcAndVpc.py yaml InterfacePcAndVpc.pib.yaml 
+
+./removeInterfacePcAndVpc.py yaml InterfacePcAndVpc.pib.yaml 
+./removeAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pib.yaml
+./removeAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pib.yaml
+./removePhysicalDomain.py yaml PhysicalDomain.pib.yaml
+./removeVlanPool.py yaml VlanPool.pib.yaml
+
+Pi-c
+----
+./createVlanPool.py yaml VlanPool.pic.yaml
+./createPhysicalDomain.py yaml PhysicalDomain.pic.yaml
+./createAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pic.yaml
+./createAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pic.yaml
+./configureInterfacePcAndVpc.py yaml InterfacePcAndVpc.pic.yaml 
+
+./removeInterfacePcAndVpc.py yaml InterfacePcAndVpc.pic.yaml 
+./removeAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pic.yaml
+./removeAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pic.yaml
+./removePhysicalDomain.py yaml PhysicalDomain.pic.yaml
+./removeVlanPool.py yaml VlanPool.pic.yaml
+
+Pi-d
+----
+./createVlanPool.py yaml VlanPool.pid.yaml
+./createPhysicalDomain.py yaml PhysicalDomain.pid.yaml
+./createAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pid.yaml
+./createAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pid.yaml
+./configureInterfacePcAndVpc.py yaml InterfacePcAndVpc.pid.yaml 
+
+./removeInterfacePcAndVpc.py yaml InterfacePcAndVpc.pid.yaml 
+./removeAccessPortPolicyGroup.py yaml AccessPortPolicyGroup.pid.yaml
+./removeAttachableAccessEntityprofile.py yaml AttachableAccessEntityprofile.pid.yaml
+./removePhysicalDomain.py yaml PhysicalDomain.pid.yaml
+./removeVlanPool.py yaml VlanPool.pid.yaml
+

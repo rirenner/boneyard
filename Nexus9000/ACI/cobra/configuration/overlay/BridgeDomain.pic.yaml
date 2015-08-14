@@ -1,0 +1,12 @@
+---
+# Usage:
+# -------------------------------------------------------
+# tenant: <tenant>
+# bridge_domain: <bridge_domain>
+# subnet_ip: <subnet_ip>
+# private_network: <private_network>
+
+tenant: Pis
+bridge_domain: PicBD 
+subnet_ip: 10.50.10.1/24
+private_network: PiVRF

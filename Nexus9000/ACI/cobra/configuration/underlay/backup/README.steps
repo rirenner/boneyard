@@ -1,0 +1,31 @@
+Pi-a
+----
+python createVlanPool.py yaml createVlanPool.pia.yaml
+python createPhysicalDomain.py yaml createPhysicalDomain.pia.yaml
+python createAttachableAccessEntityprofile.py yaml createAttachableAccessEntityprofile.pia.yaml
+python createAccessPortPolicyGroup.py yaml createAccessPortPolicyGroup.pia.yaml
+python configureInterfacePcAndVpc.py yaml configureInterfacePcAndVpc.pia.yaml 
+
+Pi-b
+----
+python createVlanPool.py yaml createVlanPool.pib.yaml
+python createPhysicalDomain.py yaml createPhysicalDomain.pib.yaml
+python createAttachableAccessEntityprofile.py yaml createAttachableAccessEntityprofile.pib.yaml
+python createAccessPortPolicyGroup.py yaml createAccessPortPolicyGroup.pib.yaml
+python configureInterfacePcAndVpc.py yaml configureInterfacePcAndVpc.pib.yaml 
+
+Pi-c
+----
+python createVlanPool.py yaml createVlanPool.pic.yaml
+python createPhysicalDomain.py yaml createPhysicalDomain.pic.yaml
+python createAttachableAccessEntityprofile.py yaml createAttachableAccessEntityprofile.pic.yaml
+python createAccessPortPolicyGroup.py yaml createAccessPortPolicyGroup.pic.yaml
+python configureInterfacePcAndVpc.py yaml configureInterfacePcAndVpc.pic.yaml 
+
+Pi-d
+----
+python createVlanPool.py yaml createVlanPool.pid.yaml
+python createPhysicalDomain.py yaml createPhysicalDomain.pid.yaml
+python createAttachableAccessEntityprofile.py yaml createAttachableAccessEntityprofile.pid.yaml
+python createAccessPortPolicyGroup.py yaml createAccessPortPolicyGroup.pid.yaml
+python configureInterfacePcAndVpc.py yaml configureInterfacePcAndVpc.pid.yaml 

@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+#This script will run on a 9k and push data into a slack webhook
+
 import os
 import subprocess
 from nxapi_module import *

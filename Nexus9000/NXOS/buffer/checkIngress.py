@@ -28,6 +28,8 @@
 #
 # Note this script uses the requests library which can be brought in
 # through the python package manager "pip".
+#
+# This script will check buffer depth queues for an interface.
 
 import requests
 import json

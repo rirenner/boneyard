@@ -1,5 +1,16 @@
 #!/bin/env python
 
+#This script will check CDP output against a static cablemap file to see if there
+#are any differences between the two.  If there are it flags the differences with
+#a warning in syslog.
+#
+#Cablemap file entries should contain hostname||Localport||type||remote port
+#Sample:
+# 
+#c9396t-camden-rufus||Eth2/1||N9K-C9396TX||Eth2/1
+#c9372b-dean(SAL190389CH)||Eth2/3||N9K-C9372TX||Eth1/49
+#c9372t-fred||Eth2/5||N9K-C9372TX||Eth1/49
+
 import os
 import time
 from cli import *

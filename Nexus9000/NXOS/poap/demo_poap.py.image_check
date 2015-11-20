@@ -10,6 +10,8 @@ import sys
 
 # This script works off of image versions.  It assumes users are using
 # standard nexus 9000 filenames and will place target images in bootflash:
+# This script will check image versions to ensure the image running matches
+# desired version, if not it will attempt to load the desired image version.
 
 desired_version         = "6.1(2)I3(4)"
 

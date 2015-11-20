@@ -10,6 +10,8 @@ import re
 import os
 from optparse import OptionParser
 
+#XMPP client, which runs on NXOS
+
 class EchoBot(ClientXMPP):
 
     def __init__(self, jid, password, prefix):

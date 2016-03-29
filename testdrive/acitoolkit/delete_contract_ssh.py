@@ -21,7 +21,7 @@ import sys
 import json
 import getpass
 
-requests.packages.urllib3.disable_warnings()
+#requests.packages.urllib3.disable_warnings()
 
 URL = 'https://10.15.254.33'
 LOGIN = 'admin'

@@ -1,0 +1,95 @@
+{
+  "appVersion": "1",
+  "desc": "",
+  "id": "113",
+  "environment": "default",
+  "environmentId": "1",
+  "jobs": [
+    {
+      "parameters": {
+        "cloudParams": {
+          "cloud": "Badlands-Default",
+          "cloudProperties": [
+            {
+              "name": "subnetId",
+              "value": "bd1"
+            },
+            {
+              "name": "UserDatastoreCluster",
+              "value": ""
+            },
+            {
+              "name": "Network_1",
+              "value": "bd1"
+            },
+            {
+              "name": "nicInfo",
+              "value": "[{\"privateIPAllocationMode\":\"DHCP\",\"nicNetworkType\":\"BRIDGE_DOMAIN\",\"networkID\":\"bd1\",\"order\":1,\"publicIpAllocate\":false}]"
+            },
+            {
+              "name": "numNICs",
+              "value": "1"
+            },
+            {
+              "name": "networkName",
+              "value": "bd1"
+            },
+            {
+              "name": "attachPublicIP",
+              "value": "false"
+            },
+            {
+              "name": "Cloud_Setting_nicInfo",
+              "value": "[{\"privateIPAllocationMode\":\"DHCP\",\"nicNetworkType\":\"BRIDGE_DOMAIN\",\"networkID\":\"bd1\",\"order\":1,\"publicIpAllocate\":false}]"
+            }
+          ],
+          "instance": "medium"
+        }
+      },
+      "serviceTierId": "ScalaBoom-113"
+    }
+  ],
+  "name": "scscriptjpaci2",
+  "parameters": {
+    "cloudParams": {
+      "cloud": "Badlands-Default",
+      "cloudProperties": [
+        {
+          "name": "subnetId",
+          "value": "bd1"
+        },
+        {
+          "name": "UserDatastoreCluster",
+          "value": ""
+        },
+        {
+          "name": "Network_1",
+          "value": "bd1"
+        },
+        {
+          "name": "nicInfo",
+          "value": "[{\"privateIPAllocationMode\":\"DHCP\",\"nicNetworkType\":\"BRIDGE_DOMAIN\",\"networkID\":\"bd1\",\"order\":1,\"publicIpAllocate\":false}]"
+        },
+        {
+          "name": "numNICs",
+          "value": "1"
+        },
+        {
+          "name": "networkName",
+          "value": "bd1"
+        },
+        {
+          "name": "attachPublicIP",
+          "value": "false"
+        },
+        {
+          "name": "Cloud_Setting_nicInfo",
+          "value": "[{\"privateIPAllocationMode\":\"DHCP\",\"nicNetworkType\":\"BRIDGE_DOMAIN\",\"networkID\":\"bd1\",\"order\":1,\"publicIpAllocate\":false}]"
+        }
+      ],
+      "instance": "medium"
+    }
+  },
+  "serviceTierId": "ScalaBoom-113"
+}
+

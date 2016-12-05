@@ -1,0 +1,12 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/ned/ios">
+
+      <vlan>
+        <vlan-list nc:operation="delete">
+          <id>24</id>
+          <name>jptestvlan</name>
+        </vlan-list>
+      </vlan>
+
+    </native>
+</config>

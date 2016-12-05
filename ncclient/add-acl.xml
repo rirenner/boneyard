@@ -1,0 +1,57 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/ned/ios">
+
+
+          <extended>
+            <name>TestACL</name>
+            <access-list-seq-rule>
+              <sequence>10</sequence>
+              <ace-rule>
+                <action>permit</action>
+                <protocol>tcp</protocol>
+                <host>10.0.0.2</host>
+                <dst-host>10.0.0.3</dst-host>
+                <dst-tcp-eq>22</dst-tcp-eq>
+              </ace-rule>
+            </access-list-seq-rule>
+            <access-list-seq-rule>
+              <sequence>20</sequence>
+              <ace-rule>
+                <action>permit</action>
+                <protocol>tcp</protocol>
+                <host>10.0.0.3</host>
+                <src-tcp-eq>22</src-tcp-eq>
+                <dst-host>10.0.0.2</dst-host>
+              </ace-rule>
+            </access-list-seq-rule>
+            <access-list-seq-rule>
+              <sequence>30</sequence>
+              <ace-rule>
+                <action>deny</action>
+                <protocol>ip</protocol>
+                <host>10.0.0.2</host>
+                <dst-host>10.0.0.3</dst-host>
+              </ace-rule>
+            </access-list-seq-rule>
+            <access-list-seq-rule>
+              <sequence>40</sequence>
+              <ace-rule>
+                <action>deny</action>
+                <protocol>ip</protocol>
+                <host>10.0.0.3</host>
+                <dst-host>10.0.0.2</dst-host>
+              </ace-rule>
+            </access-list-seq-rule>
+            <access-list-seq-rule>
+              <sequence>50</sequence>
+              <ace-rule>
+                <action>permit</action>
+                <protocol>ip</protocol>
+                <any/>
+                <dst-any/>
+              </ace-rule>
+            </access-list-seq-rule>
+          </extended>
+
+    </native>
+</config>

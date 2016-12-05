@@ -1,0 +1,14 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/ned/ios">
+
+     <ip>
+       <access-list>
+
+          <extended nc:operation="delete">
+            <name>TestACL1</name>
+          </extended>
+       </access-list>
+     </ip>
+
+    </native>
+</config>

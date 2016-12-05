@@ -4,6 +4,12 @@ from argparse import ArgumentParser
 from ncclient import manager
 import xml.dom.minidom
 if __name__ == '__main__':
+
+    data = '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <get-config> <source> <running/> </source> <filter> <native xmlns="http://cisco.com/ns/yang/ned/ios"> <ip> <access-list/> </ip> </native> </filter> </get-config> </rpc>'
+
+    data = '<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> <filter> <native xmlns="http://cisco.com/ns/yang/ned/ios"> <ip> <access-list/> </ip> </native> </filter> </rpc>'
+
+
     parser = ArgumentParser(description='Select options.')
     # Input parameters
     parser.add_argument('--host', type=str, required=True,
@@ -21,5 +27,5 @@ if __name__ == '__main__':
                          password=args.password,
                          device_params={'name':"csr"})
     # Pretty print the XML reply
-    xmlDom = xml.dom.minidom.parseString( str( m.get_config( source='running' ) ) )
+    xmlDom = xml.dom.minidom.parseString( str( m.get_config(source=data) ) )
     print xmlDom.toprettyxml( indent = "  " )

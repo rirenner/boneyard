@@ -1,0 +1,18 @@
+<edit-config>
+  <target>
+    <running/>
+  </target>
+  <config>
+
+    <native xmlns="http://cisco.com/ns/yang/ned/ios">
+
+      <vlan>
+        <vlan-list>
+          <id>24</id>
+          <name>jptestvlan</name>
+        </vlan-list>
+      </vlan>
+
+    </native>
+  </config>
+</edit-config>

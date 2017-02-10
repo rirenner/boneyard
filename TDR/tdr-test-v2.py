@@ -19,7 +19,7 @@ def grab_intf(i):
     if i == "":
         return 
     j = (i.split(' '))[0]
-    intfs{j} = ""
+    intfs[j] = ""
 
 for i in o1.split('\n'):
     grab_intf(i)
@@ -34,20 +34,20 @@ for i in intfs:
 done = False
 while done == False:
     for i in intfs:
-        if intfs{i} != "":
+        if intfs[i] != "":
             continue
         cmd = "show cable-diagnostics tdr interface " + i 
         o3 = cli.execute(cmd);
         if "Not Completed" in o3:
             continue
         else :
-            intfs{i} = o3
+            intfs[i] = o3
 
     time.sleep(2)
     # now loop again looking to see if we are all done
     found_one = False
     for i in intfs:
-        if intfs{i} == "":
+        if intfs[i] == "":
             found_one = True;
     if found_one == False:
         done = True        
@@ -56,5 +56,5 @@ while done == False:
 
 for i in intfs:
     print "Interface: ", i
-    print intfs{i}
+    print intfs[i]
     print "\n\n"

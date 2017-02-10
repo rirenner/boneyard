@@ -53,8 +53,16 @@ while done == False:
         done = True        
 
 # We are done gathering now just print output
+target = open('/bootflash/myoutputfile', 'w')
+target.truncate()
 
 for i in intfs:
-    print "Interface: ", i
+    title = "Interfaces: " + i 
+    print title 
+    target.write(title)
     print intfs[i]
+    target.write(intfs[i])
     print "\n\n"
+    target.write("\n\n")
+
+target.close()
